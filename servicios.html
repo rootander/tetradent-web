@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/theme-color1.css">
+    <style>
+        #whatsapp-icon { position: fixed; right: 20px; bottom: 24px; z-index: 9999; }
+        .wsp-float { display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: #25D366; border-radius: 50%; box-shadow: 0 4px 15px rgba(37,211,102,0.4); transition: all 0.3s ease; animation: wspPulse 2s infinite; }
+        .wsp-float img { width: 36px; height: 36px; }
+        .wsp-float:hover { transform: scale(1.12); box-shadow: 0 6px 25px rgba(37,211,102,0.6); animation: none; }
+        @keyframes wspPulse { 0%{box-shadow:0 4px 15px rgba(37,211,102,0.4)} 50%{box-shadow:0 4px 25px rgba(37,211,102,0.7),0 0 0 10px rgba(37,211,102,0.1)} 100%{box-shadow:0 4px 15px rgba(37,211,102,0.4)} }
+        .scrollToTop { display: none !important; }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2R5NNYWH60"></script>
     <script>
@@ -402,10 +410,10 @@
     </div>
     <footer class="footer-wrapper footer-layout1" data-bg-src="img/bg/bg-shape-4.png">
         <div class="container">
-            <div id="whatsapp-icon" style="position:fixed; right:2px; bottom:55px; text-align:center; padding:3px; z-index: 1000;">
-                <a href="https://api.whatsapp.com/send?phone=51970623615&text=Hola!!" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" height="50"></a>
-                </div>
+            <div id="whatsapp-icon">
+                <a href="https://api.whatsapp.com/send?phone=51970623615&text=Hola!!" target="_blank" class="wsp-float">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" height="50"></a>
+            </div>
             <div class="footer-top">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-sm-6 col-md-auto text-center text-sm-start">
@@ -434,7 +442,6 @@
             </div>
         </div>
     </footer>
-    <a href="#" class="scrollToTop scroll-bottom style2"><i class="fas fa-arrow-alt-up"></i></a>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="js/app.min.js"></script>
