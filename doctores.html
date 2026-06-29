@@ -305,134 +305,91 @@
         .carousel-badge.despues {
             background: rgba(40, 167, 69, 0.9);
         }
-        .img-compare-container {
-            position: relative;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            transition: all 0.4s ease;
+        /* === Estilos Carrusel Casos Clínicos === */
+        .casos-modal .modal-dialog { max-width: 95vw; }
+        @media (min-width: 992px) { .casos-modal .modal-dialog { max-width: 80vw; } }
+        .img-compare-container { position: relative; border-radius: 12px; overflow: hidden; border: 3px solid #d6eef5; background: #fff; }
+        .img-compare-container img { display: block; width: 100%; height: auto; min-height: 200px; object-fit: cover; }
+        @media (min-width: 768px) { .img-compare-container img { min-height: 280px; } }
+        @media (min-width: 992px) { .img-compare-container img { min-height: 340px; } }
+        .casos-modal .modal-content { border-radius: 16px; border: 2px solid #d6eef5; box-shadow: 0 10px 40px rgba(1,85,122,0.15); }
+        .casos-modal .modal-header { background: linear-gradient(135deg, #38A3A5, #01557A); border-top-left-radius: 16px; border-top-right-radius: 16px; border-bottom: none; padding: 16px 24px; }
+        .casos-modal .modal-header .modal-title { color: #fff; font-weight: 700; font-size: 1.1rem; }
+        .casos-modal .modal-header .btn-close { background: rgba(255,255,255,0.9) url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2301557A'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat; border-radius: 50%; width: 34px; height: 34px; padding: 8px; opacity: 1; border: none; transition: all 0.3s ease; }
+        .casos-modal .modal-header .btn-close:hover { background: #fff; transform: rotate(90deg); }
+        .casos-bg { background: linear-gradient(180deg, #f5fbff 0%, #eaf6fa 100%); padding: 25px 20px; }
+        @media (min-width: 768px) { .casos-bg { padding: 30px 35px; } }
+        .casos-bg .carousel { position: relative; }
+
+        /* === RESET TOTAL de botones Bootstrap === */
+        .casos-bg .carousel-control-prev,
+        .casos-bg .carousel-control-next {
+            all: unset !important;
+            position: absolute !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            width: 40px !important;
+            height: 40px !important;
+            z-index: 10 !important;
+            cursor: pointer !important;
+            border-radius: 50% !important;
+            background: rgba(1, 85, 122, 0.85) !important;
+            backdrop-filter: blur(4px) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            transition: all 0.3s ease !important;
+            border: 2px solid rgba(255,255,255,0.5) !important;
+            box-shadow: 0 2px 8px rgba(1,85,122,0.3) !important;
         }
-        .img-compare-container:hover {
-            box-shadow: 0 12px 35px rgba(1, 85, 122, 0.25);
-            transform: translateY(-3px);
+        .casos-bg .carousel-control-prev { left: -28px !important; }
+        .casos-bg .carousel-control-next { right: -28px !important; }
+        @media (max-width: 767px) {
+            .casos-bg .carousel-control-prev { left: -18px !important; }
+            .casos-bg .carousel-control-next { right: -18px !important; }
+            .casos-bg .carousel-control-prev,
+            .casos-bg .carousel-control-next { width: 36px !important; height: 36px !important; }
         }
-        .img-compare-container img {
-            transition: transform 0.5s ease;
+        .casos-bg .carousel-control-prev:hover,
+        .casos-bg .carousel-control-next:hover {
+            background: rgba(56, 163, 165, 0.95) !important;
+            transform: translateY(-50%) scale(1.1) !important;
+            box-shadow: 0 4px 12px rgba(56,163,165,0.4) !important;
         }
-        .img-compare-container:hover img {
-            transform: scale(1.03);
+        /* Ocultar span de Bootstrap */
+        .casos-bg .carousel-control-prev-icon,
+        .casos-bg .carousel-control-next-icon {
+            display: none !important;
         }
-        .modal-content {
-            border-radius: 20px;
-            border: none;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-            overflow: hidden;
+        /* Flechas SVG en ::after */
+        .casos-bg .carousel-control-prev::after {
+            content: '' !important;
+            display: block !important;
+            width: 14px !important;
+            height: 14px !important;
+            border-top: 2.5px solid #fff !important;
+            border-left: 2.5px solid #fff !important;
+            transform: rotate(-45deg) !important;
+            margin-left: 4px !important;
         }
-        .modal-header {
-            background: linear-gradient(135deg, #01557A 0%, #38A3A5 100%);
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom: none;
-            padding: 20px 28px;
+        .casos-bg .carousel-control-next::after {
+            content: '' !important;
+            display: block !important;
+            width: 14px !important;
+            height: 14px !important;
+            border-top: 2.5px solid #fff !important;
+            border-right: 2.5px solid #fff !important;
+            transform: rotate(45deg) !important;
+            margin-right: 4px !important;
         }
-        .modal-header .modal-title {
-            color: #ffffff !important;
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 0.5px;
-        }
-        .modal-header .btn-close {
-            filter: brightness(0) invert(1);
-            opacity: 0.85;
-            transition: all 0.3s ease;
-        }
-        .modal-header .btn-close:hover {
-            opacity: 1;
-            transform: rotate(90deg);
-        }
-        .modal-body {
-            background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
-        }
-        .casos-carousel .carousel-control-prev-icon,
-        .casos-carousel .carousel-control-next-icon {
-            background: linear-gradient(135deg, #01557A, #38A3A5);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            background-size: 40%;
-            box-shadow: 0 4px 15px rgba(1, 85, 122, 0.4);
-            transition: all 0.3s ease;
-        }
-        .casos-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
-        .casos-carousel .carousel-control-next:hover .carousel-control-next-icon {
-            background: linear-gradient(135deg, #38A3A5, #01557A);
-            box-shadow: 0 6px 25px rgba(56, 163, 165, 0.5);
-            transform: scale(1.1);
-        }
-        .casos-carousel .carousel-control-prev,
-        .casos-carousel .carousel-control-next {
-            width: 8%;
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-        .casos-carousel .carousel-control-prev {
-            left: -10px;
-        }
-        .casos-carousel .carousel-control-next {
-            right: -10px;
-        }
-        .casos-carousel .carousel-indicators {
-            bottom: -8px;
-            margin-bottom: 0;
-        }
-        .casos-carousel .carousel-indicators [data-bs-target] {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #38A3A5;
-            border: 2px solid #fff;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        .casos-carousel .carousel-indicators [data-bs-target].active {
-            background-color: #01557A;
-            transform: scale(1.3);
-            box-shadow: 0 2px 10px rgba(1, 85, 122, 0.5);
-        }
-        .carousel-badge {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            background: rgba(1, 85, 122, 0.92);
-            backdrop-filter: blur(6px);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 13px;
-            z-index: 10;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        .carousel-badge.despues {
-            background: rgba(40, 167, 69, 0.92);
-        }
-        .casos-title {
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 3px solid #38A3A5;
-            display: inline-block;
-        }
-        .btn-close {
-            background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat !important;
-            opacity: 0.6;
-        }
-        .btn-close:hover {
-            opacity: 1;
-        }
+        /* Indicadores */
+        .indicadores-casos { display: flex; justify-content: center; gap: 10px; margin-top: 18px; padding-top: 14px; border-top: 2px solid #d6eef5; }
+        .indicador-dot { width: 12px; height: 12px; border-radius: 50%; background: #b8dce6; border: 2px solid #fff; cursor: pointer; transition: all 0.3s ease; }
+        .indicador-dot.active { background: #01557A; transform: scale(1.25); }
+        .indicador-dot:hover { background: #38A3A5; }
+        /* Badges */
+        .carousel-badge { position: absolute; top: 10px; left: 10px; background: rgba(1,85,122,0.88); backdrop-filter: blur(4px); color: #fff; padding: 6px 14px; border-radius: 6px; font-weight: 700; font-size: 11px; z-index: 10; text-transform: uppercase; letter-spacing: 1px; }
+        .carousel-badge.despues { background: rgba(40,167,69,0.88); }
         
         .team-img {
             border-radius: 10px;
@@ -482,21 +439,19 @@
     </style>
 
     <!-- Modal Katherine -->
-    <div class="modal fade" id="modalCasosKatherine" tabindex="-1" aria-labelledby="modalCasosKatherineLabel" aria-hidden="true">
+    <div class="modal fade casos-modal" id="modalCasosKatherine" tabindex="-1" aria-labelledby="modalCasosKatherineLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-title" id="modalCasosKatherineLabel"><i class="fas fa-images mr-2"></i> Casos Clínicos - Dra. Katherine</h5>
+            <h5 class="modal-title" id="modalCasosKatherineLabel"><i class="fas fa-images me-2"></i> Casos Clínicos - Dra. Katherine</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4">
-             <div class="casos-carousel">
-             <!-- Bootstrap Carousel -->
+          <div class="modal-body casos-bg">
              <div id="carouselKatherine" class="carousel slide" data-bs-ride="false">
                <div class="carousel-inner">
                  <div class="carousel-item active">
-                   <div class="row gx-4">
-                       <div class="col-12 col-md-6 mb-3 mb-md-0">
+                   <div class="row g-4 align-items-center">
+                       <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge">Antes</span>
                                <img src="img/servicios/odontologia-general.jpg" class="d-block w-100" alt="Antes">
@@ -505,14 +460,14 @@
                        <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge despues">Después</span>
-                               <img src="img/servicios/ortodoncia.jpg" class="d-block w-100" alt="Despues">
+                               <img src="img/servicios/ortodoncia.jpg" class="d-block w-100" alt="Después">
                            </div>
                        </div>
                    </div>
                  </div>
                  <div class="carousel-item">
-                   <div class="row gx-4">
-                       <div class="col-12 col-md-6 mb-3 mb-md-0">
+                   <div class="row g-4 align-items-center">
+                       <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge">Antes</span>
                                <img src="img/servicios/endodoncia.jpg" class="d-block w-100" alt="Antes">
@@ -521,25 +476,24 @@
                        <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge despues">Después</span>
-                               <img src="img/servicios/estetica-dental.jpg" class="d-block w-100" alt="Despues">
+                               <img src="img/servicios/estetica-dental.jpg" class="d-block w-100" alt="Después">
                            </div>
                        </div>
                    </div>
                  </div>
                </div>
-               <div class="carousel-indicators">
-                 <button type="button" data-bs-target="#carouselKatherine" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                 <button type="button" data-bs-target="#carouselKatherine" data-bs-slide-to="1"></button>
+               <div class="indicadores-casos">
+                 <button type="button" data-bs-target="#carouselKatherine" data-bs-slide-to="0" class="indicador-dot active"></button>
+                 <button type="button" data-bs-target="#carouselKatherine" data-bs-slide-to="1" class="indicador-dot"></button>
                </div>
-               <button class="carousel-control-prev" type="button" data-bs-target="#carouselKatherine" data-bs-slide="prev">
-                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Previous</span>
-               </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#carouselKatherine" data-bs-slide="next">
-                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Next</span>
-               </button>
-             </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselKatherine" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselKatherine" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
              </div>
           </div>
         </div>
@@ -547,21 +501,19 @@
     </div>
 
     <!-- Modal Carlos -->
-    <div class="modal fade" id="modalCasosCarlos" tabindex="-1" aria-labelledby="modalCasosCarlosLabel" aria-hidden="true">
+    <div class="modal fade casos-modal" id="modalCasosCarlos" tabindex="-1" aria-labelledby="modalCasosCarlosLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title text-title" id="modalCasosCarlosLabel"><i class="fas fa-images mr-2"></i> Casos Clínicos - Dr. Carlos</h5>
+            <h5 class="modal-title" id="modalCasosCarlosLabel"><i class="fas fa-images me-2"></i> Casos Clínicos - Dr. Carlos</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
-          <div class="modal-body p-4">
-             <div class="casos-carousel">
-             <!-- Bootstrap Carousel -->
+          <div class="modal-body casos-bg">
              <div id="carouselCarlos" class="carousel slide" data-bs-ride="false">
                <div class="carousel-inner">
                  <div class="carousel-item active">
-                   <div class="row gx-4">
-                       <div class="col-12 col-md-6 mb-3 mb-md-0">
+                   <div class="row g-4 align-items-center">
+                       <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge">Antes</span>
                                <img src="img/servicios/odontologia-general.jpg" class="d-block w-100" alt="Antes">
@@ -570,14 +522,14 @@
                        <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge despues">Después</span>
-                               <img src="img/servicios/ortodoncia.jpg" class="d-block w-100" alt="Despues">
+                               <img src="img/servicios/ortodoncia.jpg" class="d-block w-100" alt="Después">
                            </div>
                        </div>
                    </div>
                  </div>
                  <div class="carousel-item">
-                   <div class="row gx-4">
-                       <div class="col-12 col-md-6 mb-3 mb-md-0">
+                   <div class="row g-4 align-items-center">
+                       <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge">Antes</span>
                                <img src="img/servicios/endodoncia.jpg" class="d-block w-100" alt="Antes">
@@ -586,25 +538,24 @@
                        <div class="col-12 col-md-6">
                            <div class="img-compare-container">
                                <span class="carousel-badge despues">Después</span>
-                               <img src="img/servicios/estetica-dental.jpg" class="d-block w-100" alt="Despues">
+                               <img src="img/servicios/estetica-dental.jpg" class="d-block w-100" alt="Después">
                            </div>
                        </div>
                    </div>
                  </div>
                </div>
-               <div class="carousel-indicators">
-                 <button type="button" data-bs-target="#carouselCarlos" data-bs-slide-to="0" class="active" aria-current="true"></button>
-                 <button type="button" data-bs-target="#carouselCarlos" data-bs-slide-to="1"></button>
+               <div class="indicadores-casos">
+                 <button type="button" data-bs-target="#carouselCarlos" data-bs-slide-to="0" class="indicador-dot active"></button>
+                 <button type="button" data-bs-target="#carouselCarlos" data-bs-slide-to="1" class="indicador-dot"></button>
                </div>
-               <button class="carousel-control-prev" type="button" data-bs-target="#carouselCarlos" data-bs-slide="prev">
-                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Previous</span>
-               </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#carouselCarlos" data-bs-slide="next">
-                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                 <span class="visually-hidden">Next</span>
-               </button>
-             </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCarlos" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCarlos" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
              </div>
           </div>
         </div>
