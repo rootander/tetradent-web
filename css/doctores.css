@@ -383,10 +383,17 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
-.servicio-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
+.servicio-card__image {
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+}
+.servicio-card__image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .servicio-info {
     padding: 16px 18px;
@@ -418,7 +425,7 @@
     margin-right: 4px;
 }
 @media (max-width: 767px) {
-    .servicio-card img { height: 200px; }
+    .servicio-card__image { height: 240px; }
     .servicio-info h6 { font-size: 0.9rem; }
     .btn-servicio { font-size: 0.8rem; padding: 8px 16px; }
 }
