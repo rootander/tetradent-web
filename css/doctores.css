@@ -596,31 +596,6 @@
 .btn-servicio i {
     margin-right: 4px;
 }
-/* === WhatsApp Float === */
-#whatsapp-icon { position: fixed; right: 20px; bottom: 24px; z-index: 99999; }
-.wsp-float {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-    transition: all 0.3s ease;
-    animation: wspPulse 2s infinite;
-}
-.wsp-float img { width: 36px; height: 36px; }
-.wsp-float:hover { transform: scale(1.12); box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6); animation: none; }
-@keyframes wspPulse {
-    0% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
-    50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.7), 0 0 0 10px rgba(37, 211, 102, 0.1); }
-    100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); }
-}
-
-/* === Scroll to Top === */
-.scrollToTop { display: none !important; }
-
 /* === Animations === */
 .doctor-row .doctor-info {
     opacity: 0;
