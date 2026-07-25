@@ -1,5 +1,5 @@
 /* ============================================
-   PROMO BAR v14 - Premium Balanced
+   PROMO BAR v15 - Premium Final
    Tetra Dent
    Senior UX/UI Design
    ============================================ */
@@ -10,7 +10,7 @@
   var SVG_GIFT = '<svg viewBox="0 0 24 24"><path d="M20 12v10H4V12"/><rect x="2" y="7" width="20" height="5" rx="1"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7C12 7 12 4.5 9.5 3 8.5 2.5 7 3 7 4.5S8.5 7 12 7z"/><path d="M12 7c0 0 0-2.5 2.5-4 1-.5 2.5 0 2.5 1.5S15.5 7 12 7z"/></svg>';
 
   var promotions = [
-    { day: 'Lunes',     discount: 'Consulta GRATIS + 10% OFF',   desc: 'al iniciar tratamiento' },
+    { day: 'Lunes',     discount: 'Consulta de Cortesía + 10% OFF',   desc: 'al iniciar tratamiento' },
     { day: 'Martes',    discount: '20% OFF',                     desc: 'en Brackets Convencionales' },
     { day: 'Miércoles', discount: '30% OFF',                     desc: 'en Prótesis y Rehabilitación Oral' },
     { day: 'Jueves',    discount: '20% OFF',                     desc: 'en Brackets Convencionales' },
