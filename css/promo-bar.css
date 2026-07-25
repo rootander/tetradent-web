@@ -1,0 +1,302 @@
+/* ============================================
+   PROMO BAR v14 - Premium Balanced
+   Tetra Dent - Dental Clinic
+   Senior UX/UI Design
+   Spacing system: 8px grid
+   ============================================ */
+
+:root {
+  --pb-bg-start: #07719A;
+  --pb-bg-end: #0C9ED6;
+  --pb-white: #FFFFFF;
+  --pb-white-090: rgba(255,255,255,0.90);
+  --pb-white-070: rgba(255,255,255,0.70);
+  --pb-white-040: rgba(255,255,255,0.40);
+  --pb-corp: #01557A;
+  --pb-font: 'Roboto', sans-serif;
+}
+
+/* === BAR === */
+.promo-bar {
+  background: linear-gradient(110deg, var(--pb-bg-start) 0%, var(--pb-bg-end) 100%);
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 100;
+  overflow: hidden;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.promo-bar:hover {
+  filter: brightness(1.04);
+}
+
+/* top highlight */
+.promo-bar::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, rgba(255,255,255,0.10) 50%, transparent 90%);
+  pointer-events: none;
+}
+
+/* === INNER === */
+.promo-bar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 3;
+}
+
+/* === LEFT === */
+.promo-bar__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+}
+
+/* === LABEL === */
+.promo-bar__label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.promo-bar__icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.promo-bar__icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--pb-white);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.promo-bar__title {
+  font-family: var(--pb-font);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pb-white-090);
+  margin: 0;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* === SEPARATOR === */
+.promo-bar__sep {
+  width: 1px;
+  height: 16px;
+  background: var(--pb-white-040);
+  flex-shrink: 0;
+}
+
+/* === TICKER === */
+.promo-bar__ticker {
+  flex: 1;
+  max-width: 480px;
+  overflow: hidden;
+  position: relative;
+  height: 24px;
+  min-width: 0;
+}
+
+.promo-bar__ticker-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* slide */
+.promo-bar__slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  opacity: 0;
+  transform: translateX(14px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+
+.promo-bar__slide.active {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.promo-bar__slide.exit {
+  opacity: 0;
+  transform: translateX(-14px);
+}
+
+/* Day badge */
+.promo-bar__day {
+  font-family: var(--pb-font);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--pb-corp);
+  background: var(--pb-white);
+  padding: 4px 14px;
+  border-radius: 999px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+/* Promo text */
+.promo-bar__text {
+  font-family: var(--pb-font);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--pb-white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
+}
+
+/* Highlighted benefit */
+.promo-bar__highlight {
+  font-weight: 700;
+  color: var(--pb-white);
+}
+
+/* === CTA LINK === */
+.promo-bar__cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+  position: relative;
+  z-index: 10;
+  margin-left: 32px;
+}
+
+.promo-bar__cta a {
+  font-family: var(--pb-font);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pb-white-070);
+  background: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  transition: color 0.25s ease;
+  box-shadow: none;
+}
+
+.promo-bar__cta a:hover {
+  color: var(--pb-white);
+}
+
+/* CTA icon */
+.promo-bar__cta-icon { display: none; }
+
+/* CTA arrow */
+.promo-bar__cta-arrow {
+  font-size: 14px;
+  font-weight: 300;
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1);
+  display: inline-flex;
+  line-height: 1;
+}
+
+.promo-bar__cta a:hover .promo-bar__cta-arrow {
+  transform: translateX(4px);
+}
+
+/* === MOBILE === */
+@media (max-width: 767.98px) {
+  .promo-bar { height: auto; }
+
+  .promo-bar__inner {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .promo-bar__left { gap: 10px; }
+  .promo-bar__label { gap: 8px; }
+
+  .promo-bar__icon { width: 18px; height: 18px; }
+  .promo-bar__icon svg { width: 15px; height: 15px; }
+
+  .promo-bar__title { font-size: 11px; }
+  .promo-bar__sep { height: 14px; }
+
+  .promo-bar__ticker {
+    max-width: none;
+    height: auto;
+    overflow: visible;
+  }
+
+  .promo-bar__ticker-inner { height: auto; }
+
+  .promo-bar__slide {
+    position: relative;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    height: auto;
+    gap: 10px;
+    transition: none;
+  }
+
+  .promo-bar__day {
+    font-size: 9px;
+    padding: 3px 10px;
+  }
+
+  .promo-bar__text {
+    font-size: 12px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+
+  .promo-bar__cta { margin-left: 8px; }
+
+  .promo-bar__cta a {
+    font-size: 11px;
+    gap: 4px;
+  }
+
+  .promo-bar__cta-arrow { font-size: 12px; }
+}
+
+/* === TABLET === */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .promo-bar__inner { padding: 0 28px; }
+  .promo-bar__ticker { max-width: 380px; }
+  .promo-bar__text { font-size: 13px; }
+}
+
+/* === LARGE === */
+@media (min-width: 1400px) {
+  .promo-bar__ticker { max-width: 540px; }
+}
