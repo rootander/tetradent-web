@@ -3,6 +3,28 @@
    Horario de Atención
    ============================================ */
 
+/* Spacing */
+.space-sm {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Section visual enhancement */
+.vs-about-wrapper.space-sm {
+  position: relative;
+}
+
+.vs-about-wrapper.space-sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(1,85,122,0.02) 0%, rgba(23,194,232,0.03) 100%);
+  pointer-events: none;
+}
+
 /* === CARD === */
 .bh-card {
   background: #ffffff;
@@ -13,11 +35,29 @@
   border: 1px solid rgba(1,85,122,0.06);
   transition: all 0.3s ease;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bh-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #01557A, #17C2E8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .bh-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 32px rgba(1,85,122,0.14);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(1,85,122,0.12);
+}
+
+.bh-card:hover::before {
+  opacity: 1;
 }
 
 /* === ICON === */
@@ -91,15 +131,27 @@
 
 /* === WHATSAPP CTA === */
 .bh-cta {
-  background: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
   border-radius: 16px;
   padding: 24px 28px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 20px rgba(1,85,122,0.08);
-  border: 1px solid rgba(1,85,122,0.06);
+  border: 1px solid rgba(1,85,122,0.08);
   gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bh-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #01557A, #17C2E8);
 }
 
 .bh-cta__text h5 {
@@ -128,6 +180,11 @@
 
 /* === RESPONSIVE === */
 @media (max-width: 991.98px) {
+  .space-sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .bh-cta {
     flex-direction: column;
     text-align: center;
@@ -136,6 +193,11 @@
 }
 
 @media (max-width: 575.98px) {
+  .space-sm {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .bh-card {
     padding: 20px 16px;
   }
