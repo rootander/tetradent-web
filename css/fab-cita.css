@@ -9,6 +9,14 @@
   overflow: hidden;
 }
 
+.service-card .sr-icons {
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
+  margin-bottom: -45px;
+}
+
 .service-card .sr-img {
   height: 280px !important;
   min-height: 280px !important;
