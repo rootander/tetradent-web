@@ -138,20 +138,14 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 4px 20px rgba(1,85,122,0.08);
-  border: 1px solid rgba(1,85,122,0.08);
+  border: none;
   gap: 16px;
   position: relative;
   overflow: hidden;
 }
 
 .bh-cta::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #01557A, #17C2E8);
+  display: none;
 }
 
 .bh-cta__text h5 {

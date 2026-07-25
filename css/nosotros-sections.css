@@ -2,6 +2,29 @@
    NOSOTROS - Section Enhancements
    ============================================ */
 
+/* === About Section === */
+.vs-about-wrapper {
+  position: relative;
+}
+
+.vs-about-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(13,94,166,0.05) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.vs-about-wrapper > .container {
+  position: relative;
+  z-index: 1;
+}
+
 /* === ¿Por qué elegirnos? === */
 .section-benefits {
   background: #ffffff;
@@ -19,6 +42,11 @@
   background-image: radial-gradient(circle, rgba(13,94,166,0.05) 1px, transparent 1px);
   background-size: 26px 26px;
   pointer-events: none;
+}
+
+.section-benefits > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section-benefits .benefit-card {
@@ -73,6 +101,23 @@
 /* === Nuestros Valores === */
 .section-values {
   position: relative;
+}
+
+.section-values::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(13,94,166,0.04) 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+.section-values > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .section-values .values-wrapper {
@@ -194,6 +239,53 @@
   color: #6b7280;
   line-height: 1.5;
   margin: 0;
+}
+
+/* === Skill/Stats Section === */
+.bg-box2 {
+  position: relative;
+}
+
+.bg-box2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(13,94,166,0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-box2 > .container,
+.bg-box2 > section {
+  position: relative;
+  z-index: 1;
+}
+
+/* === Appointment/Contact Section === */
+.appointment-wrapper {
+  position: relative;
+}
+
+.appointment-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(13,94,166,0.04) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.appointment-wrapper > .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* === About Section Image === */
