@@ -9069,3 +9069,24 @@ blockquote cite:before {
         padding-bottom: 30px
     }
 }
+
+/* === Service Cards - Uniform Height Override === */
+.service-card .sr-body {
+    min-height: 130px;
+    max-height: 130px;
+    overflow: hidden;
+}
+
+.service-card .sr-img {
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    margin-top: 0 !important;
+}
+
+.service-card .sr-img img {
+    height: 280px !important;
+    min-height: 280px !important;
+    max-height: 280px !important;
+    object-fit: cover !important;
+}
