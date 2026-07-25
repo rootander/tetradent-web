@@ -1,0 +1,301 @@
+/* ============================================
+   NOSOTROS - Section Enhancements
+   ============================================ */
+
+/* === ¿Por qué elegirnos? === */
+.section-benefits {
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-benefits::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle, rgba(13,94,166,0.05) 1px, transparent 1px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.section-benefits .benefit-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 32px 20px;
+  text-align: center;
+  border: 1px solid rgba(13,94,166,0.06);
+  box-shadow: 0 2px 12px rgba(1,85,122,0.04);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.section-benefits .benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #01557A, #17C2E8);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.section-benefits .benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(1,85,122,0.1);
+}
+
+.section-benefits .benefit-card:hover::before {
+  opacity: 1;
+}
+
+.section-benefits .benefit-card h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #01557A;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.section-benefits .benefit-card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* === Nuestros Valores === */
+.section-values {
+  position: relative;
+}
+
+.section-values .values-wrapper {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(1,85,122,0.08);
+  overflow: hidden;
+  border: 1px solid rgba(13,94,166,0.06);
+}
+
+.section-values .value-image {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.section-values .value-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(1,85,122,0.2) 0%, transparent 60%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.section-values .value-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  min-height: 480px;
+  transition: transform 0.6s ease;
+}
+
+.section-values .value-image:hover img {
+  transform: scale(1.04);
+}
+
+.section-values .value-image .value-badge {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  background: #ffffff;
+  color: #01557A;
+  padding: 18px 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(1,85,122,0.15);
+  z-index: 2;
+  text-align: center;
+}
+
+.section-values .value-image .value-badge h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+  color: #01557A;
+}
+
+.section-values .value-image .value-badge p {
+  font-size: 12px;
+  margin: 4px 0 0;
+  color: #0B6EA8;
+  font-weight: 600;
+}
+
+/* Values Content Side */
+.section-values .values-content {
+  padding: 48px 40px;
+}
+
+.section-values .values-content .sec-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-values .values-content h2 {
+  font-family: 'Quicksand', sans-serif;
+  color: #01557A;
+  margin-bottom: 32px;
+}
+
+/* Value Cards */
+.section-values .value-card {
+  background: #f8fbff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid rgba(13,94,166,0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+  margin-bottom: 16px;
+}
+
+.section-values .value-card:last-child {
+  margin-bottom: 0;
+}
+
+.section-values .value-card:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(1,85,122,0.08);
+  transform: translateX(4px);
+}
+
+.section-values .value-card h4 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+  color: #01557A;
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.section-values .value-card p {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* === About Section Image === */
+.about-img1 {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(1,85,122,0.12);
+}
+
+.about-img1::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(1,85,122,0.08) 100%);
+  pointer-events: none;
+}
+
+.about-img1 img {
+  transition: transform 0.6s ease;
+}
+
+.about-img1:hover img {
+  transform: scale(1.02);
+}
+
+/* === Section Titles === */
+.section-title h2 {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 12px;
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #01557A, #17C2E8);
+  border-radius: 2px;
+}
+
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.mb-16 {
+  margin-bottom: 16px;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+/* === Responsive === */
+@media (max-width: 991.98px) {
+  .section-values .values-content {
+    padding: 32px 24px;
+  }
+
+  .section-values .value-image img {
+    min-height: 350px;
+  }
+
+  .section-values .value-image .value-badge {
+    bottom: 16px;
+    right: 16px;
+    padding: 14px 18px;
+  }
+
+  .section-values .value-image .value-badge h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-values .value-image img {
+    min-height: 280px;
+  }
+
+  .section-values .value-image .value-badge {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    display: inline-block;
+    margin: -24px auto 0;
+    z-index: 3;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-benefits .benefit-card {
+    padding: 24px 16px;
+  }
+
+  .section-values .values-content {
+    padding: 24px 16px;
+  }
+}
