@@ -1,0 +1,148 @@
+/* ============================================
+   BUSINESS HOURS - Tetra Dent
+   Horario de Atención
+   ============================================ */
+
+/* === CARD === */
+.bh-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(1,85,122,0.08);
+  border: 1px solid rgba(1,85,122,0.06);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.bh-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(1,85,122,0.14);
+}
+
+/* === ICON === */
+.bh-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.bh-card:hover .bh-card__icon {
+  transform: scale(1.08);
+}
+
+.bh-card__icon--blue {
+  background: linear-gradient(135deg, #01557A 0%, #0B6EA8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(1,110,168,0.3);
+}
+
+.bh-card__icon--cyan {
+  background: linear-gradient(135deg, #0B6EA8 0%, #17C2E8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(23,194,232,0.3);
+}
+
+.bh-card__icon--teal {
+  background: linear-gradient(135deg, #01557A 0%, #17C2E8 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(1,85,122,0.3);
+}
+
+/* === CONTENT === */
+.bh-card__day {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #01557A;
+  margin: 0 0 8px;
+}
+
+.bh-card__hours {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b7280;
+  margin: 0 0 4px;
+  line-height: 1.6;
+}
+
+.bh-card__hours--accent {
+  color: #0B6EA8;
+  font-weight: 600;
+}
+
+.bh-card__hours--small {
+  font-size: 12px;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.bh-card__hours--address {
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+/* === WHATSAPP CTA === */
+.bh-cta {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px rgba(1,85,122,0.08);
+  border: 1px solid rgba(1,85,122,0.06);
+  gap: 16px;
+}
+
+.bh-cta__text h5 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #01557A;
+}
+
+.bh-cta__text p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.bh-cta__btn {
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bh-cta__btn i {
+  font-size: 18px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 991.98px) {
+  .bh-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .bh-card {
+    padding: 20px 16px;
+  }
+
+  .bh-card__icon {
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+}
